@@ -15,11 +15,13 @@
 
 class DotMatrixDisplay {
 	Pin load;
-	uint8_t *data;
 	SPI_HandleTypeDef* hspi;
 	uint8_t chain;
+	uint8_t *data;
+	bool externalBuffer;
 public:
-	DotMatrixDisplay(Pin load, SPI_HandleTypeDef *hspi, uint8_t chain = 1);
+	DotMatrixDisplay(Pin load, SPI_HandleTypeDef *hspi, uint8_t chain = 1,
+			uint8_t* buffer = nullptr);
 	~DotMatrixDisplay();
 
 	void setIntensity(uint8_t intensity);

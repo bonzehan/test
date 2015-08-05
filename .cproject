@@ -49,6 +49,7 @@
 								<option id="gnu.cpp.compiler.option.preprocessor.def.1277291133" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="STM32F103xB"/>
 								</option>
+								<option id="gnu.cpp.compiler.option.dialect.std.966705835" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.c++11" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.285856941" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.2122274436" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker"/>
@@ -66,11 +67,8 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.511076884.1951254706" name="hacks.cpp" rcbsApplicability="disable" resourcePath="Src/hacks.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1452035622.1740554395">
-						<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1452035622.1740554395" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1452035622"/>
-					</fileInfo>
 					<sourceEntries>
-						<entry excluding="Src/hacks.cpp|Src/main.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="Src/main.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -147,11 +145,8 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.511076884.115480461.109709769" name="hacks.cpp" rcbsApplicability="disable" resourcePath="Src/hacks.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1793963065.2137302506">
-						<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1793963065.2137302506" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1793963065"/>
-					</fileInfo>
 					<sourceEntries>
-						<entry excluding="Src/hacks.cpp|Src/main.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="Src/main.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

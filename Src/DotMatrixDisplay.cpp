@@ -8,9 +8,13 @@
 #include "DotMatrixDisplay.h"
 
 DotMatrixDisplay::DotMatrixDisplay(Pin load, SPI_HandleTypeDef* hspi,
-		uint8_t chain) :
-		load(load), hspi(hspi), chain(chain) {
-	data = (uint8_t*) malloc(8 * chain);
+		uint8_t chain, uint8_t* buffer) :
+		load(load), hspi(hspi), chain(chain), data(buffer) {
+	externalBuffer = true;
+	if (data == nullptr) {
+		data = (uint8_t*) malloc(8 * chain);
+		externalBuffer = false;
+	}
 	memset(data, 0, 8 * chain);
 	load.set();
 	sendCmd(0x0c, 0x01);	// no shutdown
@@ -68,7 +72,8 @@ void DotMatrixDisplay::update() {
 }
 
 DotMatrixDisplay::~DotMatrixDisplay() {
-	free(data);
+	if (!externalBuffer)
+		free(data);
 }
 
 void DotMatrixDisplay::sendCmd(uint8_t address, uint8_t val,

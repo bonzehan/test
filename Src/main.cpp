@@ -11,7 +11,8 @@
 
 PCF8574 lcdPcf(&hi2c1, 0x07);
 PCF8574_LCD lcd(&lcdPcf);
-DotMatrixDisplay display(Pin(GPIOA, GPIO_PIN_6), &hspi1, 2);
+uint8_t matrixBuf[16];
+DotMatrixDisplay display(Pin(GPIOA, GPIO_PIN_6), &hspi1, 2, matrixBuf);
 BMP180 bmp(&hi2c1);
 PCF8574 relays(&hi2c1);
 MPU6050 mpu(&hi2c1);
