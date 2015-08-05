@@ -37,7 +37,7 @@ public:
 private:
 	void sendData();
 	void sendData(uint8_t address, uint8_t index);
-	void sendCmd(uint8_t address, uint8_t val);
+	void sendCmd(uint8_t address, uint8_t val, uint8_t devicePosition = 0xff);
 
 };
 

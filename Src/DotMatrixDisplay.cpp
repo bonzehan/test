@@ -71,12 +71,20 @@ DotMatrixDisplay::~DotMatrixDisplay() {
 	free(data);
 }
 
-void DotMatrixDisplay::sendCmd(uint8_t address, uint8_t val) {
-	uint8_t buf[2];
-	buf[0] = address;
-	buf[1] = val;
+void DotMatrixDisplay::sendCmd(uint8_t address, uint8_t val,
+		uint8_t devicePosition) {
+	uint8_t buf[2 * chain];
+	for (int i = 0; i < chain; ++i) {
+		if (i == devicePosition || devicePosition == 0xff) {
+			buf[2 * i] = address;
+			buf[2 * i + 1] = val;
+		} else {
+			buf[2 * i] = 0;
+			buf[2 * i + 1] = 0;
+		}
+	}
 	load.reset();
-	HAL_SPI_Transmit(hspi, buf, 2, 100);
+	HAL_SPI_Transmit(hspi, buf, 2 * chain, 100);
 	load.set();
 }
 
