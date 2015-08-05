@@ -11,7 +11,7 @@
 
 PCF8574 lcdPcf(&hi2c1, 0x07);
 PCF8574_LCD lcd(&lcdPcf);
-DotMatrixDisplay display(Pin(GPIOA, GPIO_PIN_6), &hspi1);
+DotMatrixDisplay display(Pin(GPIOA, GPIO_PIN_6), &hspi1, 2);
 BMP180 bmp(&hi2c1);
 PCF8574 relays(&hi2c1);
 MPU6050 mpu(&hi2c1);
@@ -26,9 +26,8 @@ int main(void) {
 
 	while (1) {
 
-		for (int i = 0; i < 8; ++i) {
-			display.writeLine(i, 1 << ((i + count) % 8));
-		}
+		display.shiftDisplay(true);
+		display.writeLine(15, 1 << (count % 8));
 		display.update();
 
 		relays.shiftOut(~count);
@@ -38,6 +37,6 @@ int main(void) {
 
 		count++;
 		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-		HAL_Delay(10);
+		//HAL_Delay(10);
 	}
 }

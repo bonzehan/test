@@ -66,8 +66,11 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.511076884.1951254706" name="hacks.cpp" rcbsApplicability="disable" resourcePath="Src/hacks.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1452035622.1740554395">
+						<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1452035622.1740554395" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1452035622"/>
+					</fileInfo>
 					<sourceEntries>
-						<entry excluding="Src/main.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="Src/hacks.cpp|Src/main.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -144,8 +147,11 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.511076884.115480461.109709769" name="hacks.cpp" rcbsApplicability="disable" resourcePath="Src/hacks.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1793963065.2137302506">
+						<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1793963065.2137302506" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1793963065"/>
+					</fileInfo>
 					<sourceEntries>
-						<entry excluding="Src/main.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="Src/hacks.cpp|Src/main.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
