@@ -76,3 +76,12 @@ void MPU6050::enableFIFO(bool en) {
 void MPU6050::enableINT(MPU_INT interrupt) {
 	writeReg(INT_ENABLE, interrupt);
 }
+
+void MPU6050::readFifo(uint8_t* fifo, uint16_t* bw) {
+	uint16_t fifoCount = readReg16(FIFO_COUNTH);
+	while (fifoCount--) {
+		*fifo = readReg(FIFO_R_W);
+		++fifo;
+	}
+	*bw = fifoCount;
+}

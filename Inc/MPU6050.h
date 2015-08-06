@@ -95,6 +95,8 @@ private:
 
 	void enableINT(MPU_INT interrupt);
 
+	void readFifo(uint8_t* fifo, uint16_t* bw);
+
 };
 
 #endif /* MPU6050_H_ */
